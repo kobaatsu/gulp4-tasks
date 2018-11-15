@@ -1,0 +1,6 @@
+export CompileCoffee from './CompileCoffee'
+export CompilePug from './CompilePug'
+export CompileStylus from './CompileStylus'
+export Copy from './Copy'
+export MinifyImage from './MinifyImage'
+export Open from './Open'
