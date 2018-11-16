@@ -14,7 +14,7 @@ const prettify = require('postcss-prettify');
 const compileStylus = (src, dist, option) => {
   let opts = [];
   if (option.mqpack) { opts.push(mqpacker({ sort: true })); }
-  if (option.sort) { opts.push(sorting(require('./.postcss-sorting.json'))); }
+  if (option.sort) { opts.push(sorting(require('../.postcss-sorting.json'))); }
   if (option.prefix) {
     let pfOpts = {};
     if (option.prefix.browsers) {

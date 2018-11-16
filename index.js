@@ -1,9 +1,10 @@
-const CompileCoffee = require('./CompileCoffee');
-const CompilePug = require('./CompilePug');
-const CompileStylus = require('./CompileStylus');
-const Copy = require('./Copy');
-const MinifyImage = require('./MinifyImage');
-const Open = require('./Open');
+const CompileCoffee = require('./tasks/CompileCoffee');
+const CompilePug = require('./tasks/CompilePug');
+const CompileStylus = require('./tasks/CompileStylus');
+const Copy = require('./tasks/Copy');
+const MinifyImage = require('./tasks/MinifyImage');
+const Open = require('./tasks/Open');
+const SvgStore = require('./tasks/SvgStore');
 
 const tasks = {
   CompileCoffee,
@@ -12,6 +13,7 @@ const tasks = {
   Copy,
   MinifyImage,
   Open,
+  SvgStore,
 }
 
 module.exports = tasks;
