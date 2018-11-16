@@ -1,11 +1,11 @@
-import gulp from 'gulp';
+const gulp = require('gulp');
 
-import plumber from 'gulp-plumber';
-import notify from 'gulp-notify';
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
 
-import pug from 'gulp-pug';
+const pug = require('gulp-pug');
 
-export default function compilePug(src, dist, minify) {
+const compilePug = (src, dist, minify) => {
   return gulp
     .src(src)
     .pipe(
@@ -24,3 +24,5 @@ export default function compilePug(src, dist, minify) {
     )
     .pipe(gulp.dest(dist));
 }
+
+module.exports = compilePug;

@@ -1,11 +1,11 @@
-import gulp from 'gulp';
+const gulp = require('gulp');
 
-import plumber from 'gulp-plumber';
-import notify from 'gulp-notify';
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
 
-import coffee from 'gulp-coffee';
+const coffee = require('gulp-coffee');
 
-export default function compileCoffee(src, dist) {
+const compileCoffee = (src, dist) => {
   return gulp
     .src(src)
     .pipe(
@@ -22,3 +22,5 @@ export default function compileCoffee(src, dist) {
     )
     .pipe(gulp.dest(dist));
 }
+
+module.exports = compileCoffee;
