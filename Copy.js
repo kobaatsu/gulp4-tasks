@@ -1,9 +1,9 @@
-import gulp from 'gulp';
+const gulp = require('gulp');
 
-import plumber from 'gulp-plumber';
-import notify from 'gulp-notify';
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
 
-export default function copy(src, dist) {
+const copy = (src, dist) => {
   console.log(`COPY ${src} -> ${dist}`);
   return gulp
     .src(src)
@@ -18,3 +18,5 @@ export default function copy(src, dist) {
     )
     .pipe(gulp.dest(dist));
 }
+
+module.exports = copy;

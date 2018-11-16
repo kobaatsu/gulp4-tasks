@@ -1,8 +1,12 @@
-import gulp from 'gulp';
+const gulp = require('gulp');
 
-import opn from 'opn';
+const opn = require('opn');
 
-export default function open(port) {
-  console.log(`OPEN http://localhost:${port}`);
-  opn(`http://localhost:${port}`, { wait: false });
+const open = urls => {
+  urls.forEach(elm => {
+    console.log(`OPEN ${elm}`);
+    opn(elm, { wait: false });
+  })
 }
+
+module.exports = open;

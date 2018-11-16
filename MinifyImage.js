@@ -1,15 +1,15 @@
-import gulp from 'gulp';
+const gulp = require('gulp');
 
-import plumber from 'gulp-plumber';
-import notify from 'gulp-notify';
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
 
-import svgo from 'gulp-svgo';
-import changed from 'gulp-changed';
-import imagemin from 'gulp-imagemin';
-import pngquant from 'imagemin-pngquant';
-import mozjpeg from 'imagemin-mozjpeg';
+const svgo = require('gulp-svgo');
+const changed = require('gulp-changed');
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const mozjpeg = require('imagemin-mozjpeg');
 
-export default function MinifyImage(src, dist) {
+const MinifyImage = (src, dist) => {
   return gulp
     .src(src)
     .pipe(
@@ -41,3 +41,5 @@ export default function MinifyImage(src, dist) {
     )
     .pipe(gulp.dest(dist));
 }
+
+module.exports = MinifyImage;

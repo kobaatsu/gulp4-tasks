@@ -1,17 +1,17 @@
-import gulp from 'gulp';
+const gulp = require('gulp');
 
-import plumber from 'gulp-plumber';
-import notify from 'gulp-notify';
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
 
-import stylus from 'gulp-stylus';
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import mqpacker from 'css-mqpacker';
-import clean from 'postcss-clean';
-import sorting from 'postcss-sorting';
-import prettify from 'postcss-prettify';
+const stylus = require('gulp-stylus');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const mqpacker = require('css-mqpacker');
+const clean = require('postcss-clean');
+const sorting = require('postcss-sorting');
+const prettify = require('postcss-prettify');
 
-export default function compileStylus(src, dist, option) {
+const compileStylus = (src, dist, option) => {
   let opts = [];
   if (option.mqpack) { opts.push(mqpacker({ sort: true })); }
   if (option.sort) { opts.push(sorting(require('./.postcss-sorting.json'))); }
@@ -50,3 +50,5 @@ export default function compileStylus(src, dist, option) {
     )
     .pipe(gulp.dest(dist));
 }
+
+module.exports = compileStylus;
