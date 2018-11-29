@@ -5,7 +5,12 @@ const notify = require('gulp-notify');
 
 const pug = require('gulp-pug');
 
-const compilePug = (src, dist, minify) => {
+const compilePug = (src, dist, minify, locals) => {
+  let opts = {}
+  opts.pretty = minify? false : true;
+  if (locals) {
+    opts.locals = locals
+  }
   return gulp
     .src(src)
     .pipe(
@@ -18,9 +23,7 @@ const compilePug = (src, dist, minify) => {
       })
     )
     .pipe(
-      pug({
-        pretty: !minify,
-      })
+      pug(opts)
     )
     .pipe(gulp.dest(dist));
 }
