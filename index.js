@@ -1,3 +1,4 @@
+const BrowserSync = require('./tasks/BrowserSync');
 const CompileCoffee = require('./tasks/CompileCoffee');
 const CompilePug = require('./tasks/CompilePug');
 const CompileStylus = require('./tasks/CompileStylus');
@@ -7,6 +8,7 @@ const Open = require('./tasks/Open');
 const SvgStore = require('./tasks/SvgStore');
 
 const tasks = {
+  BrowserSync,
   CompileCoffee,
   CompilePug,
   CompileStylus,
