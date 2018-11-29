@@ -7,7 +7,7 @@ const stylus = require('gulp-stylus');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
-const clean = require('postcss-clean');
+const nano = require('cssnano');
 const sorting = require('postcss-sorting');
 const prettify = require('postcss-prettify');
 
@@ -24,7 +24,7 @@ const compileStylus = (src, dist, option) => {
     }
     opts.push(autoprefixer(pfOpts));
   }
-  opts.push(clean({ level: 2 }));
+  opts.push(nano());
   if (!option.minify) {
     opts.push(prettify());
   }
