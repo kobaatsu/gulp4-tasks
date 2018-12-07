@@ -1,6 +1,6 @@
 {
   "name": "gulp4-tasks",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "tasks for gulp 4.0",
   "main": "index.js",
   "scripts": {},
@@ -9,17 +9,18 @@
     "url": "git@github.com:kobaatsu/gulp4-tasks.git"
   },
   "dependencies": {
-    "autoprefixer": "^9.3.1",
+    "autoprefixer": "^9.4.2",
     "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.7",
     "gulp": "^4.0.0",
     "gulp-changed": "^3.2.0",
     "gulp-coffee": "^3.0.3",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-load-plugins": "^1.5.0",
     "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
@@ -30,6 +31,7 @@
     "imagemin-pngquant": "^6.0.0",
     "opn": "^5.4.0",
     "postcss-prettify": "^0.3.4",
-    "postcss-sorting": "^4.0.1"
+    "postcss-sorting": "^4.0.1",
+    "rimraf": "^2.6.2"
   }
 }
