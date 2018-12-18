@@ -1,10 +1,10 @@
 const tasks = {
   BrowserSync: require('./tasks/BrowserSync'),
+  Clean: require('./tasks/Clean'),
   CompileCoffee: require('./tasks/CompileCoffee'),
   CompilePug: require('./tasks/CompilePug'),
   CompileStylus: require('./tasks/CompileStylus'),
   Copy: require('./tasks/Copy'),
-  Empty: require('./tasks/Empty'),
   MinifyImage: require('./tasks/MinifyImage'),
   MinifyJs: require('./tasks/MinifyJs'),
   MinifyPhp: require('./tasks/MinifyPhp'),
