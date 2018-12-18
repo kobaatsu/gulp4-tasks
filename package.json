@@ -1,6 +1,6 @@
 {
   "name": "gulp4-tasks",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "tasks for gulp 4.0",
   "main": "index.js",
   "scripts": {},
