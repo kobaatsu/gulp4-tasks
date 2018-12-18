@@ -1,9 +1,9 @@
-const gulp = require('gulp');
+const gulp = require('gulp')
 
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
+const plumber = require('gulp-plumber')
+const notify = require('gulp-notify')
 
-const coffee = require('gulp-coffee');
+const coffee = require('gulp-coffee')
 
 const compileCoffee = (src, dist) => {
   return gulp
@@ -12,7 +12,7 @@ const compileCoffee = (src, dist) => {
       plumber({
         errorHandler:
           notify.onError({
-            title: 'JS Error: Line <%= error.line %>',
+            title: 'COFFEE Error: Line <%= error.line %>',
             message: '<%= error.message %>'
           })
       })
@@ -20,7 +20,7 @@ const compileCoffee = (src, dist) => {
     .pipe(
       coffee()
     )
-    .pipe(gulp.dest(dist));
+    .pipe(gulp.dest(dist))
 }
 
-module.exports = compileCoffee;
+module.exports = compileCoffee

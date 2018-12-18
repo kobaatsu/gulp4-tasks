@@ -35,7 +35,7 @@ const compileStylus = (src, dist, option) => {
       plumber({
         errorHandler:
           notify.onError({
-            title: 'CSS Error: Line <%= error.line %>',
+            title: 'STYLUS Error: Line <%= error.line %>',
             message: '<%= error.message %>'
           })
       })

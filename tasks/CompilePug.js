@@ -11,8 +11,9 @@ const rename = require('gulp-rename')
 const compilePug = (src, dist, options) => {
   let opts = {}
   opts.pretty = true
+  opts.rename = false
   if (options) {
-    if (options.pretty && options.pretty === false) {
+    if (options.pretty === false) {
       opts.pretty = false
     }
     if (options.locals) {
@@ -21,6 +22,9 @@ const compilePug = (src, dist, options) => {
     if (options.filters) {
       opts.filters = options.filters
     }
+    if (options.ext) {
+      opts.rename = true
+    }
   }
   return gulp
     .src(src)
@@ -28,7 +32,7 @@ const compilePug = (src, dist, options) => {
       plumber({
         errorHandler:
           notify.onError({
-            title: 'TEMPLATE Error: Line <%= error.line %>',
+            title: 'PUG Error: Line <%= error.line %>',
             message: '<%= error.message %>'
           })
       })
@@ -38,7 +42,7 @@ const compilePug = (src, dist, options) => {
     )
     .pipe(
       gulpif(
-        options && options.ext,
+        opts.rename,
         rename(path => {
           console.log(`COMPILE ${path.dirname}/${path.basename}.pug -> ${path.dirname}/${path.basename}.${options.ext}`)
           path.extname = `.${options.ext}`
