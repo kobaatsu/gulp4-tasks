@@ -26,4 +26,14 @@ object
 
 string
 
-## Empty(path)
+## Clean(path)
+
+## Webpack(src, dist, config)
+
+### config
+
+#### mode
+
+#### output
+
+##### filename

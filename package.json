@@ -1,6 +1,6 @@
 {
   "name": "gulp4-tasks",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "tasks for gulp 4.0",
   "main": "index.js",
   "scripts": {},
@@ -36,6 +36,8 @@
     "opn": "^5.4.0",
     "postcss-prettify": "^0.3.4",
     "postcss-sorting": "^4.0.1",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.9",
+    "webpack": "^4.27.1",
+    "webpack-stream": "^5.2.1"
   }
 }

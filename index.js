@@ -11,6 +11,7 @@ const tasks = {
   Open: require('./tasks/Open'),
   SvgStore: require('./tasks/SvgStore'),
   TemplateHeader: require('./tasks/TemplateHeader'),
+  Webpack: require('./tasks/Webpack'),
 }
 
 module.exports = tasks
