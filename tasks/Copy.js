@@ -3,7 +3,7 @@ const gulp = require('gulp')
 const plumber = require('gulp-plumber')
 const notify = require('gulp-notify')
 
-const copy = (src, dist) => {
+const Copy = (src, dist) => {
   console.log(`COPY ${src} -> ${dist}`)
   return gulp
     .src(src)
@@ -19,4 +19,4 @@ const copy = (src, dist) => {
     .pipe(gulp.dest(dist))
 }
 
-module.exports = copy
+module.exports = Copy

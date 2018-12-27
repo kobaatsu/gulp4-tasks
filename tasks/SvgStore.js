@@ -7,7 +7,7 @@ const svgo = require('gulp-svgo')
 const svgstore = require('gulp-svgstore')
 const rename = require('gulp-rename')
 
-const svgStore = (src, dist, name) => {
+const SvgStore = (src, dist, name) => {
   return gulp
     .src(src)
     .pipe(
@@ -38,4 +38,4 @@ const svgStore = (src, dist, name) => {
     .pipe(gulp.dest(dist))
 }
 
-module.exports = svgStore;
+module.exports = SvgStore;

@@ -8,7 +8,7 @@ const pug = require('gulp-pug')
 const gulpif = require('gulp-if')
 const rename = require('gulp-rename')
 
-const compilePug = (src, dist, options) => {
+const CompilePug = (src, dist, options) => {
   let opts = {}
   opts.pretty = true
   opts.rename = false
@@ -52,4 +52,4 @@ const compilePug = (src, dist, options) => {
     .pipe(gulp.dest(dist))
 }
 
-module.exports = compilePug
+module.exports = CompilePug

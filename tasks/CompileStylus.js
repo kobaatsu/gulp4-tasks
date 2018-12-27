@@ -11,7 +11,7 @@ const nano = require('cssnano');
 const sorting = require('postcss-sorting');
 const prettify = require('postcss-prettify');
 
-const compileStylus = (src, dist, option) => {
+const CompileStylus = (src, dist, option) => {
   let opts = [];
   if (option.mqpack) { opts.push(mqpacker({ sort: true })); }
   if (option.sort) { opts.push(sorting(require('../.postcss-sorting.json'))); }
@@ -51,4 +51,4 @@ const compileStylus = (src, dist, option) => {
     .pipe(gulp.dest(dist));
 }
 
-module.exports = compileStylus;
+module.exports = CompileStylus;

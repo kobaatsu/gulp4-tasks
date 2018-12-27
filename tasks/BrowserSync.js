@@ -2,7 +2,7 @@ const gulp = require('gulp');
 
 const bs = require('browser-sync');
 
-const browserSync = (base, port, directory) => {
+const BrowserSync = (base, port, directory) => {
   let opts = {
     server: {}
   };
@@ -16,4 +16,4 @@ const browserSync = (base, port, directory) => {
   return bs.init(opts);
 }
 
-module.exports = browserSync;
+module.exports = BrowserSync;
