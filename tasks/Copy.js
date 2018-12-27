@@ -1,10 +1,10 @@
-const gulp = require('gulp');
+const gulp = require('gulp')
 
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
+const plumber = require('gulp-plumber')
+const notify = require('gulp-notify')
 
 const copy = (src, dist) => {
-  console.log(`COPY ${src} -> ${dist}`);
+  console.log(`COPY ${src} -> ${dist}`)
   return gulp
     .src(src)
     .pipe(
@@ -12,11 +12,11 @@ const copy = (src, dist) => {
         errorHandler:
         notify.onError({
           title: 'COPY Error: Line <%= error.line %>',
-          message: '<%= error.message %>'
+          message: '<%= error.message %>',
         })
       })
     )
-    .pipe(gulp.dest(dist));
+    .pipe(gulp.dest(dist))
 }
 
-module.exports = copy;
+module.exports = copy

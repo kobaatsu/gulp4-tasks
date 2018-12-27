@@ -1,11 +1,11 @@
-const gulp = require('gulp');
+const gulp = require('gulp')
 
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
+const plumber = require('gulp-plumber')
+const notify = require('gulp-notify')
 
-const svgo = require('gulp-svgo');
-const svgstore = require('gulp-svgstore');
-const rename = require('gulp-rename');
+const svgo = require('gulp-svgo')
+const svgstore = require('gulp-svgstore')
+const rename = require('gulp-rename')
 
 const svgStore = (src, dist, name) => {
   return gulp
@@ -35,7 +35,7 @@ const svgStore = (src, dist, name) => {
     .pipe(
       rename({ basename: name })
     )
-    .pipe(gulp.dest(dist));
+    .pipe(gulp.dest(dist))
 }
 
 module.exports = svgStore;
