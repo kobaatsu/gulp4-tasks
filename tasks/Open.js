@@ -1,7 +1,7 @@
 const gulp = require('gulp')
 const opn = require('opn')
 
-const open = urls => {
+const Open = urls => {
   return new Promise((resolve, reject) => {
     urls.forEach(elm => {
       console.log(`OPEN ${elm}`)
@@ -11,4 +11,4 @@ const open = urls => {
   })
 }
 
-module.exports = open
+module.exports = Open

@@ -8,13 +8,17 @@ const pug = require('gulp-pug')
 const gulpif = require('gulp-if')
 const rename = require('gulp-rename')
 
-const compilePug = (src, dist, options) => {
+const CompilePug = (src, dist, options) => {
   let opts = {}
   opts.pretty = true
   opts.rename = false
+  opts.doctype = 'html'
   if (options) {
     if (options.pretty === false) {
       opts.pretty = false
+    }
+    if (options.doctype) {
+      opts.doctype = options.doctype
     }
     if (options.locals) {
       opts.locals = options.locals
@@ -52,4 +56,4 @@ const compilePug = (src, dist, options) => {
     .pipe(gulp.dest(dist))
 }
 
-module.exports = compilePug
+module.exports = CompilePug

@@ -5,7 +5,7 @@ const notify = require('gulp-notify')
 
 const coffee = require('gulp-coffee')
 
-const compileCoffee = (src, dist) => {
+const CompileCoffee = (src, dist) => {
   return gulp
     .src(src)
     .pipe(
@@ -23,4 +23,4 @@ const compileCoffee = (src, dist) => {
     .pipe(gulp.dest(dist))
 }
 
-module.exports = compileCoffee
+module.exports = CompileCoffee
