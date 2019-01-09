@@ -9,10 +9,9 @@ const Copy = (src, dist) => {
     .src(src)
     .pipe(
       plumber({
-        errorHandler:
-        notify.onError({
+        errorHandler: notify.onError({
           title: 'COPY Error: Line <%= error.line %>',
-          message: '<%= error.message %>',
+          message: '<%= error.message %>'
         })
       })
     )

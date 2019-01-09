@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 
-const {phpMinify} = require('@cedx/gulp-php-minify')
+const { phpMinify } = require('@cedx/gulp-php-minify')
 
 const MinifyPhp = (src, dist, bin) => {
   let binary = {
@@ -11,9 +11,7 @@ const MinifyPhp = (src, dist, bin) => {
   }
   return gulp
     .src(src)
-    .pipe(
-      phpMinify(binary)
-    )
+    .pipe(phpMinify(binary))
     .pipe(gulp.dest(dist))
 }
 

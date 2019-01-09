@@ -1,13 +1,12 @@
-const gulp = require('gulp');
+const gulp = require('gulp')
 
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
+const plumber = require('gulp-plumber')
+const notify = require('gulp-notify')
 
-const svgo = require('gulp-svgo');
-const changed = require('gulp-changed');
-const imagemin = require('gulp-imagemin');
-const pngquant = require('imagemin-pngquant');
-const mozjpeg = require('imagemin-mozjpeg');
+const changed = require('gulp-changed')
+const imagemin = require('gulp-imagemin')
+const pngquant = require('imagemin-pngquant')
+const mozjpeg = require('imagemin-mozjpeg')
 
 const MinifyImage = (src, dist) => {
   return gulp
@@ -20,9 +19,7 @@ const MinifyImage = (src, dist) => {
         })
       })
     )
-    .pipe(
-      changed(dist)
-    )
+    .pipe(changed(dist))
     .pipe(
       imagemin([
         pngquant({
@@ -36,10 +33,10 @@ const MinifyImage = (src, dist) => {
         }),
         imagemin.svgo(),
         imagemin.optipng(),
-        imagemin.gifsicle(),
+        imagemin.gifsicle()
       ])
     )
-    .pipe(gulp.dest(dist));
+    .pipe(gulp.dest(dist))
 }
 
-module.exports = MinifyImage;
+module.exports = MinifyImage

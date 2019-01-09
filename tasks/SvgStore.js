@@ -12,11 +12,10 @@ const SvgStore = (src, dist, name) => {
     .src(src)
     .pipe(
       plumber({
-        errorHandler:
-          notify.onError({
-            title: 'SVG Error: Line <%= error.line %>',
-            message: '<%= error.message %>'
-          })
+        errorHandler: notify.onError({
+          title: 'SVG Error: Line <%= error.line %>',
+          message: '<%= error.message %>'
+        })
       })
     )
     .pipe(
@@ -25,17 +24,13 @@ const SvgStore = (src, dist, name) => {
           { removeTitle: true },
           { removeAttrs: { attrs: '(fill|stroke|data.*)' } },
           { removeStyleElement: true },
-          { cleanupIDs: false },
+          { cleanupIDs: false }
         ]
       })
     )
-    .pipe(
-      svgstore({ inlineSvg: true })
-    )
-    .pipe(
-      rename({ basename: name })
-    )
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename({ basename: name }))
     .pipe(gulp.dest(dist))
 }
 
-module.exports = SvgStore;
+module.exports = SvgStore

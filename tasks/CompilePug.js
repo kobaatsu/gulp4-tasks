@@ -34,21 +34,20 @@ const CompilePug = (src, dist, options) => {
     .src(src)
     .pipe(
       plumber({
-        errorHandler:
-          notify.onError({
-            title: 'PUG Error: Line <%= error.line %>',
-            message: '<%= error.message %>'
-          })
+        errorHandler: notify.onError({
+          title: 'PUG Error: Line <%= error.line %>',
+          message: '<%= error.message %>'
+        })
       })
     )
-    .pipe(
-      pug(opts)
-    )
+    .pipe(pug(opts))
     .pipe(
       gulpif(
         opts.rename,
         rename(path => {
-          console.log(`COMPILE ${path.dirname}/${path.basename}.pug -> ${path.dirname}/${path.basename}.${options.ext}`)
+          console.log(
+            `COMPILE ${path.dirname}/${path.basename}.pug -> ${path.dirname}/${path.basename}.${options.ext}` // eslint-disable-line
+          )
           path.extname = `.${options.ext}`
         })
       )
