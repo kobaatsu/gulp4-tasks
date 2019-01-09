@@ -3,7 +3,9 @@
   "version": "0.1.11",
   "description": "tasks for gulp 4.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint --fix *.js"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:kobaatsu/gulp4-tasks.git"
@@ -39,5 +41,16 @@
     "uglify-es": "^3.3.9",
     "webpack": "^4.28.2",
     "webpack-stream": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "prettier": "^1.15.3"
   }
 }
