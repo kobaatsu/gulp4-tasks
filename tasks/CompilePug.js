@@ -12,9 +12,13 @@ const CompilePug = (src, dist, options) => {
   let opts = {}
   opts.pretty = true
   opts.rename = false
+  opts.doctype = 'html'
   if (options) {
     if (options.pretty === false) {
       opts.pretty = false
+    }
+    if (options.doctype) {
+      opts.doctype = options.doctype
     }
     if (options.locals) {
       opts.locals = options.locals
