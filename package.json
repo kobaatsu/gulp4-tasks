@@ -1,6 +1,6 @@
 {
   "name": "gulp4-tasks",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "tasks for gulp 4.0",
   "main": "index.js",
   "scripts": {},
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@cedx/gulp-php-minify": "^9.0.0",
-    "autoprefixer": "^9.4.3",
+    "autoprefixer": "^9.4.4",
     "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.8",
