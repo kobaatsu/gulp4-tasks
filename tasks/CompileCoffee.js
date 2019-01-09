@@ -10,16 +10,13 @@ const CompileCoffee = (src, dist) => {
     .src(src)
     .pipe(
       plumber({
-        errorHandler:
-          notify.onError({
-            title: 'COFFEE Error: Line <%= error.line %>',
-            message: '<%= error.message %>'
-          })
+        errorHandler: notify.onError({
+          title: 'COFFEE Error: Line <%= error.line %>',
+          message: '<%= error.message %>'
+        })
       })
     )
-    .pipe(
-      coffee()
-    )
+    .pipe(coffee())
     .pipe(gulp.dest(dist))
 }
 

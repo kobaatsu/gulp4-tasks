@@ -8,9 +8,7 @@ const minify = composer(uglifyEs, console)
 const MinifyJs = (src, dist) => {
   return gulp
     .src(src)
-    .pipe(
-      minify()
-    )
+    .pipe(minify())
     .pipe(gulp.dest(dist))
 }
 

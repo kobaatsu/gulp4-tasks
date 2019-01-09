@@ -1,4 +1,3 @@
-const gulp = require('gulp')
 const opn = require('opn')
 
 const Open = urls => {
