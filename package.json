@@ -1,6 +1,6 @@
 {
   "name": "gulp4-tasks",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "tasks for gulp 4.0",
   "author": "KOBAYASHI atsushi<kobaatsu@gmail.com>",
   "homepage": "https://github.com/kobaatsu/gulp4-tasks",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@cedx/gulp-php-minify": "^9.0.0",
-    "autoprefixer": "^9.4.4",
+    "autoprefixer": "^9.4.6",
     "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.8",
@@ -26,6 +26,7 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-markdown": "^3.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
@@ -36,23 +37,23 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.1",
     "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-pngquant": "^6.0.1",
+    "imagemin-pngquant": "^7.0.0",
     "opn": "^5.4.0",
     "postcss-prettify": "^0.3.4",
     "postcss-sorting": "^4.0.1",
     "uglify-es": "^3.3.9",
-    "webpack": "^4.28.2",
+    "webpack": "^4.29.0",
     "webpack-stream": "^5.2.1"
   },
   "devDependencies": {
-    "eslint": "^5.12.0",
-    "eslint-config-prettier": "^3.3.0",
+    "eslint": "^5.12.1",
+    "eslint-config-prettier": "^4.0.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import": "^2.15.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "prettier": "^1.15.3"
+    "prettier": "^1.16.1"
   }
 }

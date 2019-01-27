@@ -2,6 +2,7 @@ const tasks = {
   BrowserSync: require('./tasks/BrowserSync'),
   Clean: require('./tasks/Clean'),
   CompileCoffee: require('./tasks/CompileCoffee'),
+  CompileMarkdown: require('./tasks/CompileMarkdown'),
   CompilePug: require('./tasks/CompilePug'),
   CompileStylus: require('./tasks/CompileStylus'),
   Copy: require('./tasks/Copy'),
