@@ -23,9 +23,8 @@ const MinifyImage = (src, dist) => {
     .pipe(
       imagemin([
         pngquant({
-          quality: '65-80',
-          speed: 1,
-          floyd: 0
+          quality: [0.65, 0.8],
+          speed: 1
         }),
         mozjpeg({
           quality: 85,
