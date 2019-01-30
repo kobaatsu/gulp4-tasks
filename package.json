@@ -1,10 +1,14 @@
 {
   "name": "gulp4-tasks",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "tasks for gulp 4.0",
   "author": "KOBAYASHI atsushi<kobaatsu@gmail.com>",
   "homepage": "https://github.com/kobaatsu/gulp4-tasks",
+  "bugs": {
+    "url": "https://github.com/kobaatsu/gulp4-tasks/issues"
+  },
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
     "lint": "eslint --fix *.js"
   },
@@ -12,8 +16,11 @@
     "type": "git",
     "url": "git@github.com:kobaatsu/gulp4-tasks.git"
   },
+  "keywords": [
+    "gulp"
+  ],
   "dependencies": {
-    "@cedx/gulp-php-minify": "^9.0.0",
+    "@cedx/gulp-php-minify": "^9.1.0",
     "autoprefixer": "^9.4.7",
     "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
@@ -49,11 +56,11 @@
     "eslint": "^5.12.1",
     "eslint-config-prettier": "^4.0.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "prettier": "^1.16.1"
+    "prettier": "^1.16.2"
   }
 }
