@@ -5,6 +5,7 @@ const tasks = {
   CompileMarkdown: require('./tasks/CompileMarkdown'),
   CompilePug: require('./tasks/CompilePug'),
   CompileStylus: require('./tasks/CompileStylus'),
+  Concat: require('./tasks/Concat'),
   Copy: require('./tasks/Copy'),
   MinifyImage: require('./tasks/MinifyImage'),
   MinifyJs: require('./tasks/MinifyJs'),
