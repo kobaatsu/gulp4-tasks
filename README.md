@@ -83,7 +83,8 @@ const opts = {
   mqpack: true,
   minify: false,
   sort: true,
-  prefix: true
+  prefix: true,
+  removeComments: true
 }
 
 const createCss = () => tasks.CompileStylus('./*.styl', 'path/dist', opts)
@@ -94,13 +95,40 @@ exports.createCss = createCss
 
 ##### mqpack
 
+bool
+
+default `false`
+
+
 ##### sort
 
+bool
+
+default `false`
+
 ##### prefix
+
+bool or *browsers*
 
 ###### browsers
 
 ##### minify
+
+bool
+
+default `false`
+
+##### removeComments
+
+bool
+
+default `true`
+
+### Concat(src, dist, filename)
+
+#### src
+
+glob or array
 
 ### Copy(src, dist)
 

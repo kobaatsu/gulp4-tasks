@@ -28,7 +28,15 @@ const CompileStylus = (src, dist, option) => {
     }
     opts.push(autoprefixer(pfOpts))
   }
-  opts.push(nano())
+  let commentOpts = true
+  if (option.removeComments === false) {
+    commentOpts = false
+  }
+  opts.push(
+    nano({
+      preset: ['default', { discardComments: commentOpts }]
+    })
+  )
   if (!option.minify) {
     opts.push(prettify())
   }
