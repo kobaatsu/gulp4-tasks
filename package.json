@@ -1,6 +1,6 @@
 {
   "name": "gulp4-tasks",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "tasks for gulp 4.0",
   "author": "KOBAYASHI atsushi<kobaatsu@gmail.com>",
   "homepage": "https://github.com/kobaatsu/gulp4-tasks",
@@ -21,7 +21,7 @@
   ],
   "dependencies": {
     "@cedx/gulp-php-minify": "^9.1.1",
-    "autoprefixer": "^9.4.10",
+    "autoprefixer": "^9.5.0",
     "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
@@ -41,12 +41,12 @@
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-stylus": "^2.7.0",
-    "gulp-svgo": "^2.1.0",
+    "gulp-svgo": "^2.1.1",
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
-    "opn": "^5.4.0",
+    "open": "^6.0.0",
     "postcss-prettify": "^0.3.4",
     "postcss-sorting": "^4.1.0",
     "uglify-es": "^3.3.9",
@@ -54,7 +54,7 @@
     "webpack-stream": "^5.2.1"
   },
   "devDependencies": {
-    "eslint": "^5.15.0",
+    "eslint": "^5.15.3",
     "eslint-config-prettier": "^4.1.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",

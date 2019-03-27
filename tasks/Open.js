@@ -1,10 +1,10 @@
-const opn = require('opn')
+const open = require('open')
 
 const Open = urls => {
   return new Promise((resolve, reject) => {
     urls.forEach(elm => {
       console.log(`OPEN ${elm}`)
-      opn(elm, { wait: false })
+      open(elm, { wait: false })
     })
     resolve()
   })
