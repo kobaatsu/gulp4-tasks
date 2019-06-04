@@ -11,6 +11,9 @@ const nano = require('cssnano')
 const sorting = require('postcss-sorting')
 const prettify = require('postcss-prettify')
 
+const gulpif = require('gulp-if')
+const sourcemaps = require('gulp-sourcemaps')
+
 const CompileStylus = (src, dist, option) => {
   let opts = []
   if (option.mqpack) {
@@ -34,9 +37,11 @@ const CompileStylus = (src, dist, option) => {
   if (!option.minify) {
     opts.push(prettify())
   }
+  const sourcemapOpts = option.sourcemap !== false
 
   return gulp
     .src(src)
+    .pipe(gulpif(sourcemapOpts, sourcemaps.init()))
     .pipe(
       plumber({
         errorHandler: notify.onError({
@@ -47,6 +52,7 @@ const CompileStylus = (src, dist, option) => {
     )
     .pipe(stylus({ 'include css': true }))
     .pipe(postcss(opts))
+    .pipe(gulpif(sourcemapOpts, sourcemaps.write(option.sourcemap)))
     .pipe(gulp.dest(dist))
 }
 
