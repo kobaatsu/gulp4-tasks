@@ -20,13 +20,7 @@ const CompileStylus = (src, dist, option) => {
     opts.push(sorting(require('../.postcss-sorting.json')))
   }
   if (option.prefix) {
-    let pfOpts = {}
-    if (option.prefix.browsers) {
-      pfOpts.browsers = option.prefix.browsers
-    } else {
-      pfOpts.browsers = ['last 1 versions']
-    }
-    opts.push(autoprefixer(pfOpts))
+    opts.push(autoprefixer())
   }
   let commentOpts = true
   if (option.removeComments === false) {

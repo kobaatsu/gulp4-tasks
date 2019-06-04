@@ -91,6 +91,8 @@ const createCss = () => tasks.CompileStylus('./*.styl', 'path/dist', opts)
 exports.createCss = createCss
 ```
 
+autoprefixer options -> https://github.com/browserslist/browserslist#readme
+
 #### options
 
 ##### mqpack
