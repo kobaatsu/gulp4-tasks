@@ -37,7 +37,7 @@ const CompileStylus = (src, dist, option) => {
   if (!option.minify) {
     opts.push(prettify())
   }
-  const sourcemapOpts = option.sourcemap !== false
+  const sourcemapOpts = !!option.sourcemap
 
   return gulp
     .src(src)
@@ -52,7 +52,7 @@ const CompileStylus = (src, dist, option) => {
     )
     .pipe(stylus({ 'include css': true }))
     .pipe(postcss(opts))
-    .pipe(gulpif(sourcemapOpts, sourcemaps.write(option.sourcemap)))
+    .pipe(gulpif(sourcemapOpts, sourcemaps.write()))
     .pipe(gulp.dest(dist))
 }
 
