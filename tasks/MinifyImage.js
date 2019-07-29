@@ -3,14 +3,13 @@ const gulp = require('gulp')
 const plumber = require('gulp-plumber')
 const notify = require('gulp-notify')
 
-const changed = require('gulp-changed')
 const imagemin = require('gulp-imagemin')
 const pngquant = require('imagemin-pngquant')
 const mozjpeg = require('imagemin-mozjpeg')
 
 const MinifyImage = (src, dist) => {
   return gulp
-    .src(src)
+    .src(src, { since: gulp.lastRun(MinifyImage) })
     .pipe(
       plumber({
         errorHandler: notify.onError({
@@ -19,7 +18,6 @@ const MinifyImage = (src, dist) => {
         })
       })
     )
-    .pipe(changed(dist))
     .pipe(
       imagemin([
         pngquant({

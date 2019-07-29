@@ -6,8 +6,11 @@ const webpack = (src, dist, config) => {
   return gulp
     .src(src)
     .pipe(
-      wpStream(config, wp).on('error', function(e) {
-        this.emit('end')
+      wpStream(config, wp, (err, stats) => {
+        if (err) {
+          this.emit('end')
+        }
+        console.log(stats.toString({}))
       })
     )
     .pipe(gulp.dest(dist))

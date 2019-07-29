@@ -1,7 +1,7 @@
 const bs = require('browser-sync')
 
 const BrowserSync = (base, port, directory) => {
-  let opts = {
+  const opts = {
     server: {}
   }
   opts.server.baseDir = base

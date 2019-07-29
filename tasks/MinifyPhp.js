@@ -3,7 +3,7 @@ const gulp = require('gulp')
 const { phpMinify } = require('@cedx/gulp-php-minify')
 
 const MinifyPhp = (src, dist, bin) => {
-  let binary = {
+  const binary = {
     binary: '/usr/bin/php'
   }
   if (bin) {
