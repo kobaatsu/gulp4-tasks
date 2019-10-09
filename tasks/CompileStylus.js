@@ -19,8 +19,12 @@ const CompileStylus = (src, dist, option) => {
   if (option.sort) {
     opts.push(sorting(require('../.postcss-sorting.json')))
   }
-  if (option.prefix) {
-    opts.push(autoprefixer())
+  if (option.prefix || option.grid) {
+    const prefixOpts = {}
+    if (option.grid) {
+      prefixOpts.grid = option.grid
+    }
+    opts.push(autoprefixer(prefixOpts))
   }
   let commentOpts = true
   if (option.removeComments === false) {

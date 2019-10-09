@@ -95,6 +95,12 @@ autoprefixer options -> https://github.com/browserslist/browserslist#readme
 
 #### options
 
+##### grid
+
+bool, string
+
+default `false`
+
 ##### mqpack
 
 bool
@@ -110,9 +116,7 @@ default `false`
 
 ##### prefix
 
-bool or *browsers*
-
-###### browsers
+bool
 
 ##### minify
 
